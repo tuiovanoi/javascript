@@ -1,5 +1,9 @@
-import React from "react";
+import { HTMLProps } from "react";
 
-export interface IButton {
-    children?: React.ReactNode
+export interface ButtonProps {
+  bgColor?: 'default' | 'add' | 'edit' | 'remove'
+}
+
+export interface IButton extends HTMLProps<HTMLElement>, ButtonProps {
+  children: React.ReactNode
 }
